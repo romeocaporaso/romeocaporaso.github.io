@@ -160,13 +160,39 @@
     </section>
 
     <footer>
-        &copy; 2026 Romeo Caporaso - Sviluppo Software & Assistenza Tecnica
+        <p>&copy; 2026 Romeo Caporaso - Sviluppo Software & Assistenza Tecnica</p>
+        <p style="margin-top: 0.6rem; font-size: 0.85rem;">
+            <a href="javascript:void(0)" onclick="apriPrivacy()" style="color: var(--accent); text-decoration: none; margin: 0 0.5rem;">Privacy & Cookie Policy</a> |
+            <a href="javascript:void(0)" onclick="riapriBannerCookie()" style="color: var(--accent); text-decoration: none; margin: 0 0.5rem;">Gestisci preferenze cookie</a>
+        </p>
     </footer>
+
     
+    <!-- Finestra Informativa Privacy & Cookie Policy -->
+    <div id="privacy-modal" style="display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.85); z-index: 1000; justify-content: center; align-items: center; padding: 1rem;">
+        <div style="background: #1e293b; border: 1px solid #38bdf8; border-radius: 12px; max-width: 650px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 2rem; color: #f8fafc;">
+            <h3 style="color: #38bdf8; margin-bottom: 1rem;">Privacy & Cookie Policy</h3>
+            <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 0.8rem;">
+                <strong>Titolare del trattamento:</strong> Romeo Caporaso – Email: <a href="mailto:webromeocaporaso@gmail.com" style="color: #38bdf8;">webromeocaporaso@gmail.com</a>.
+            </p>
+            <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 0.8rem;">
+                <strong>Dati raccolti e finalità:</strong> Questo sito utilizza cookie tecnici necessari al funzionamento e, solo previo tuo esplicito consenso, cookie analitici di terza parte (<strong>Google Analytics 4</strong> con anonimizzazione dell'indirizzo IP) per raccogliere statistiche aggregate sulle visite.
+            </p>
+            <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 0.8rem;">
+                <strong>Contatti diretti:</strong> I dati inviati volontariamente via email sono utilizzati esclusivamente per rispondere alle richieste di informazioni o preventivi.
+            </p>
+            <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 1.5rem;">
+                <strong>Diritti dell'utente:</strong> Puoi modificare o revocare il consenso ai cookie in qualsiasi momento cliccando su <em>"Gestisci preferenze cookie"</em> a fondo pagina.
+            </p>
+            <button onclick="chiudiPrivacy()" style="background: #38bdf8; border: none; color: #0f172a; font-weight: 600; padding: 0.6rem 1.5rem; border-radius: 6px; cursor: pointer;">Chiudi</button>
+        </div>
+    </div>
+
     <!-- Banner Cookie + Google Analytics 4 (Conforme GDPR) -->
     <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #1e293b; border-top: 1px solid #38bdf8; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; z-index: 999;">
         <p style="font-size: 0.9rem; color: #f8fafc; margin: 0;">
-            Questo sito utilizza cookie tecnici e analitici (Google Analytics) per migliorare l'esperienza di navigazione.
+            Questo sito utilizza cookie tecnici e, previo consenso, cookie analitici (Google Analytics) per misurare le visite. 
+            <a href="javascript:void(0)" onclick="apriPrivacy()" style="color: #38bdf8; text-decoration: underline;">Leggi l'informativa</a>.
         </p>
         <div style="display: flex; gap: 0.8rem;">
             <button onclick="gestisciCookie(false)" style="background: transparent; border: 1px solid #94a3b8; color: #94a3b8; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer;">Rifiuta</button>
@@ -176,8 +202,12 @@
 
     <script>
         const GA_ID = 'G-07Y8SVF31V';
+        let analyticsCaricato = false;
 
         function caricaAnalytics() {
+            if (analyticsCaricato) return;
+            analyticsCaricato = true;
+
             const script = document.createElement('script');
             script.async = true;
             script.src = 'https://googletagmanager.com' + GA_ID;
@@ -185,6 +215,7 @@
 
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
             gtag('js', new Date());
             gtag('config', GA_ID, { 'anonymize_ip': true });
         }
@@ -192,7 +223,23 @@
         function gestisciCookie(accettato) {
             localStorage.setItem('consenso_cookie', accettato ? 'si' : 'no');
             document.getElementById('cookie-banner').style.display = 'none';
-            if (accettato) caricaAnalytics();
+            if (accettato) {
+                caricaAnalytics();
+            } else {
+                location.reload();
+            }
+        }
+
+        function riapriBannerCookie() {
+            document.getElementById('cookie-banner').style.display = 'flex';
+        }
+
+        function apriPrivacy() {
+            document.getElementById('privacy-modal').style.display = 'flex';
+        }
+
+        function chiudiPrivacy() {
+            document.getElementById('privacy-modal').style.display = 'none';
         }
 
         window.addEventListener('DOMContentLoaded', () => {
@@ -205,6 +252,7 @@
             }
         });
     </script>
+
 
 
 </body>
