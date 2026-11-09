@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Romeo Caporaso | Sviluppo Software & Assistenza Tecnica</title>
+        <style>
+          :root {
+          --bg-dark: #0f172a;
+          --bg-card: #1e293b;
+          --text-main: #f8fafc;
+          --text-muted: #94a3b8;
+          --accent: #38bdf8;
+          --accent-hover: #0284c7;
+          }
+          * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+          body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; }
+          header {
+          background: rgba(15, 23, 42, 0.9);
+          padding: 1.2rem 5%;
+          position: sticky; top: 0; z-index: 100;
+          border-bottom: 1px solid #334155;
+          display: flex; justify-content: space-between; align-items: center;
+          }
+          .logo { font-size: 1.3rem; font-weight: 700; color: var(--accent); text-decoration: none; }
+          nav a { color: var(--text-main); text-decoration: none; margin-left: 1.5rem; font-size: 0.95rem; transition: color 0.3s; }
+          nav a:hover { color: var(--accent); }
+
+          .hero {
+          padding: 5rem 5% 4rem;
+          text-align: center;
+          max-width: 900px; margin: 0 auto;
+          }
+          .hero h1 { font-size: 2.8rem; margin-bottom: 1rem; line-height: 1.2; }
+          .hero h1 span { color: var(--accent); }
+          .hero p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2rem; }
+          .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+          .btn {
+          padding: 0.8rem 1.8rem; border-radius: 8px; text-decoration: none;
+          font-weight: 600; transition: all 0.3s;
+          }
+          .btn-primary { background: var(--accent); color: #0f172a; }
+          .btn-primary:hover { background: var(--accent-hover); color: #fff; }
+          .btn-outline { border: 1px solid var(--accent); color: var(--accent); }
+          .btn-outline:hover { background: rgba(56, 189, 248, 0.1); }
+
+          section { padding: 4rem 5%; max-width: 1100px; margin: 0 auto; }
+          h2 { font-size: 2rem; margin-bottom: 2rem; text-align: center; }
+          h2 span { color: var(--accent); }
+
+          .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+          .card {
+          background: var(--bg-card); padding: 2rem; border-radius: 12px;
+          border: 1px solid #334155; transition: transform 0.3s;
+          }
+          .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+          .card h3 { color: var(--accent); margin-bottom: 0.8rem; font-size: 1.3rem; }
+          .card ul { list-style: none; margin-top: 1rem; color: var(--text-muted); }
+          .card ul li { margin-bottom: 0.5rem; padding-left: 1.2rem; position: relative; }
+          .card ul li::before { content: "▹"; position: absolute; left: 0; color: var(--accent); }
+
+          .contact-box {
+          background: var(--bg-card); padding: 3rem 2rem; border-radius: 12px;
+          text-align: center; border: 1px solid #334155;
+          }
+          footer { text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid #334155; margin-top: 3rem; }
+        </style>
+      </head>
+  <body>
+
+    <header>
+      <a href="#" class="logo">Romeo Caporaso</a>
+      <nav>
+        <a href="#chi-sono">Chi sono</a>
+        <a href="#programmazione">Programmazione</a>
+        <a href="#riparazioni">Riparazioni</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <h1>
+        Sviluppo Software & <span>Assistenza Tecnica</span>
+      </h1>
+      <p>Unisco la programmazione moderna in Python con supporto AI alla riparazione pratica di componenti tecnologici. Soluzioni concrete, veloci e su misura.</p>
+      <div class="btn-group">
+        <a href="#programmazione" class="btn btn-primary">Scopri i servizi Software</a>
+        <a href="#riparazioni" class="btn btn-outline">Riparazioni Hardware</a>
+      </div>
+    </div>
+
+    <section id="chi-sono">
+      <h2>
+        Chi <span>sono</span>
+      </h2>
+      <div class="card">
+        <p>
+          Mi chiamo <strong>Romeo Caporaso</strong> e mi occupo di tecnologia a 360 gradi. Da un lato sviluppo script, automazioni e soluzioni web sfruttando <strong>Python</strong> e i principali linguaggi di programmazione potenziati dall'Intelligenza Artificiale; dall'altro intervengo direttamente sull'hardware per diagnosticare, riparare e ottimizzare dispositivi elettronici e computer.
+        </p>
+      </div>
+    </section>
+
+    <section id="programmazione">
+      <h2>
+        Programmazione & <span>Sviluppo AI</span>
+      </h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Python & Automazioni</h3>
+          <p>Creazione di script e strumenti per semplificare il lavoro quotidiano e risparmiare tempo.</p>
+          <ul>
+            <li>Automazione di attività ripetitive e gestione file</li>
+            <li>Estrazione, pulizia e organizzazione dati</li>
+            <li>Integrazione con API e strumenti esterni</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Sviluppo Web & Software con AI</h3>
+          <p>Prototipazione rapida e sviluppo di codice pulito grazie all'ausilio mirato dell'Intelligenza Artificiale.</p>
+          <ul>
+            <li>Siti web moderni (HTML, CSS, JavaScript)</li>
+            <li>Piccoli gestionali e interfacce su misura</li>
+            <li>Debug, ottimizzazione e aggiornamento codice</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="riparazioni">
+      <h2>
+        Riparazioni & <span>Hardware</span>
+      </h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Diagnostica & Manutenzione PC</h3>
+          <p>Interventi mirati su computer fissi e notebook per ripristinare prestazioni e affidabilità.</p>
+          <ul>
+            <li>Sostituzione componenti (SSD, RAM, batterie, schermi)</li>
+            <li>Pulizia interna, cambio pasta termica e ottimizzazione</li>
+            <li>Assemblaggio PC personalizzati su richiesta</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Dispositivi & Componenti</h3>
+          <p>Supporto tecnico per la risoluzione di guasti hardware e software.</p>
+          <ul>
+            <li>Riparazione dispositivi elettronici e smartphone</li>
+            <li>Recupero dati e configurazione sistemi operativi</li>
+            <li>Consulenza tecnica per aggiornamenti hardware</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contatti">
+      <h2>
+        Contatti <span>Diretti</span>
+      </h2>
+      <div class="contact-box">
+        <p style="margin-bottom: 1.5rem; color: var(--text-muted);">Hai bisogno di un preventivo per un software, un'automazione o una riparazione tecnica? Scrivimi direttamente:</p>
+        <a href="mailto:webromeocaporaso@gmail.com" class="btn btn-primary">webromeocaporaso@gmail.com</a>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2026 Romeo Caporaso - Sviluppo Software & Assistenza Tecnica
+    </footer>
+
+  </body>
+</html>
