@@ -162,6 +162,48 @@
     <footer>
         &copy; 2026 Romeo Caporaso - Sviluppo Software & Assistenza Tecnica
     </footer>
+    <!-- Banner Cookie + Google Analytics 4 (Conforme GDPR) -->
+    <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #1e293b; border-top: 1px solid #38bdf8; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; z-index: 999;">
+        <p style="font-size: 0.9rem; color: #f8fafc; margin: 0;">
+            Questo sito utilizza cookie tecnici e analitici (Google Analytics) per migliorare l'esperienza di navigazione.
+        </p>
+        <div style="display: flex; gap: 0.8rem;">
+            <button onclick="gestisciCookie(false)" style="background: transparent; border: 1px solid #94a3b8; color: #94a3b8; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer;">Rifiuta</button>
+            <button onclick="gestisciCookie(true)" style="background: #38bdf8; border: none; color: #0f172a; font-weight: 600; padding: 0.5rem 1.2rem; border-radius: 6px; cursor: pointer;">Accetta</button>
+        </div>
+    </div>
+
+    <script>
+        const GA_ID = 'G-07Y8SVF31V';
+
+        function caricaAnalytics() {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://googletagmanager.com' + GA_ID;
+            document.head.appendChild(script);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', GA_ID, { 'anonymize_ip': true });
+        }
+
+        function gestisciCookie(accettato) {
+            localStorage.setItem('consenso_cookie', accettato ? 'si' : 'no');
+            document.getElementById('cookie-banner').style.display = 'none';
+            if (accettato) caricaAnalytics();
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const scelta = localStorage.getItem('consenso_cookie');
+            if (scelta === 'si') {
+                document.getElementById('cookie-banner').style.display = 'none';
+                caricaAnalytics();
+            } else if (scelta === 'no') {
+                document.getElementById('cookie-banner').style.display = 'none';
+            }
+        });
+    </script>
 
 </body>
 </html>
