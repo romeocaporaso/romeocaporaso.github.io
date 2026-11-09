@@ -205,7 +205,7 @@
         </div>
     </div>
 
-    <script>
+       <script>
         const GA_ID = 'G-07Y8SVF31V';
         let analyticsCaricato = false;
 
@@ -213,17 +213,18 @@
             if (analyticsCaricato) return;
             analyticsCaricato = true;
 
-            const script = document.createElement('script');
-            script.async = true;
-            script.src = 'https://googletagmanager.com' + GA_ID;
-            document.head.appendChild(script);
-
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             window.gtag = gtag;
             gtag('js', new Date());
             gtag('config', GA_ID, { 'anonymize_ip': true });
+
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://googletagmanager.com' + GA_ID;
+            document.head.appendChild(script);
         }
+
 
         function gestisciCookie(accettato) {
             localStorage.setItem('consenso_cookie', accettato ? 'si' : 'no');
