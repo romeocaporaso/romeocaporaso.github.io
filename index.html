@@ -461,47 +461,37 @@
         });
     </script>
     
+    <div id="google_translate_element" style="display:none;"></div>
     <script>
         let linguaCorrente = 'it';
-        const mappaOriginali = new Map();
 
-        // Dizionario completo delle traduzioni IT-EN (consultabile integralmente nel codice sottostante)
-        const dizionarioEN = {
-            "Chi sono": "About Me",
-            "Programmazione": "Programming",
-            "Progetti": "Projects",
-            "Riparazioni": "Repairs",
-            "Contatti": "Contact",
-            // [Il dizionario completo con le stringhe per la traduzione dinamica di UI, sezioni e progetti è disponibile nello script della risposta]
-        };
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'it',
+                includedLanguages: 'en,it',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
 
         function cambiaLingua() {
-            const target = document.querySelectorAll('nav a, .hero h1, .hero p, .hero .btn, section h2, .card h3, .card span, .card p, .card li, .card .btn, .contact-box p');
+            const combo = document.querySelector('.goog-te-combo');
+            if (!combo) return;
             if (linguaCorrente === 'it') {
-                target.forEach(el => {
-                    if (el.closest('#chi-sono') && el.tagName === 'H2') {
-                        if (!mappaOriginali.has(el)) mappaOriginali.set(el, el.innerHTML);
-                        el.innerHTML = el.innerHTML.replace(/Chi\s*<span>sono<\/span>/i, 'About <span>Me</span>');
-                        return;
-                    }
-                    const chiave = el.textContent.replace(/\s+/g, ' ').trim();
-                    if (dizionarioEN[chiave]) {
-                        if (!mappaOriginali.has(el)) mappaOriginali.set(el, el.innerHTML);
-                        const svg = el.querySelector('svg');
-                        el.innerHTML = svg ? svg.outerHTML + ' ' + dizionarioEN[chiave] : dizionarioEN[chiave];
-                    }
-                });
+                combo.value = 'en';
+                combo.dispatchEvent(new Event('change'));
                 document.getElementById('testo-lingua').textContent = 'IT';
-                document.documentElement.lang = 'en';
                 linguaCorrente = 'en';
             } else {
-                mappaOriginali.forEach((orig, el) => { el.innerHTML = orig; });
+                combo.value = 'it';
+                combo.dispatchEvent(new Event('change'));
                 document.getElementById('testo-lingua').textContent = 'EN';
-                document.documentElement.lang = 'it';
                 linguaCorrente = 'it';
             }
         }
     </script>
+    <script src="https://google.com"></script>
+
+
 
 
 
