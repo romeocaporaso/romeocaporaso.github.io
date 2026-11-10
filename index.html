@@ -364,28 +364,23 @@
             <p style="margin-bottom: 1.5rem; color: var(--text-muted);">Hai bisogno di un preventivo per un software Python, un'automazione CAD o una riparazione smartphone in zona Fano / Pesaro-Urbino? Compila il modulo qui sotto oppure usa i collegamenti rapidi:</p>
 
             <!-- Modulo di contatto diretto tramite Formsubmit -->
-               <form action="https://formsubmit.co/webromeocaporaso@gmail.com" method="POST" style="max-width: 600px; margin: 0 auto 2rem; text-align: left; display: flex; flex-direction: column; gap: 1rem;">
-
-
-
-                <!-- Configurazioni Formsubmit -->
+            <form action="https://formsubmit.co/webromeocaporaso@gmail.com" method="POST" style="max-width: 600px; margin: 0 auto 2rem; text-align: left; display: flex; flex-direction: column; gap: 1rem;">
                 <input type="hidden" name="_subject" value="Nuovo messaggio dal sito web Romeo Caporaso!">
-                <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_next" value="https://romeocaporaso.github.io/">
 
                 <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                    <input type="text" name="Nome" placeholder="Il tuo Nome *" required style="flex: 1; min-width: 200px; padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid #334155; background: var(--bg-dark); color: var(--text-main); font-size: 0.95rem;">
-                    <input type="email" name="Email" placeholder="La tua Email *" required style="flex: 1; min-width: 200px; padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid #334155; background: var(--bg-dark); color: var(--text-main); font-size: 0.95rem;">
+                    <input type="text" name="name" placeholder="Il tuo Nome *" required style="flex: 1; min-width: 200px; padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid #334155; background: var(--bg-dark); color: var(--text-main); font-size: 0.95rem;">
+                    <input type="email" name="email" placeholder="La tua Email *" required style="flex: 1; min-width: 200px; padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid #334155; background: var(--bg-dark); color: var(--text-main); font-size: 0.95rem;">
                 </div>
 
-                <select name="Servizio" style="padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid #334155; background: var(--bg-dark); color: var(--text-main); font-size: 0.95rem;">
+                <select name="servizio" style="padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid #334155; background: var(--bg-dark); color: var(--text-main); font-size: 0.95rem;">
                     <option value="Programmazione Python / Automazioni CAD">Programmazione Python / Automazioni CAD</option>
                     <option value="Riparazione Smartphone / PC">Riparazione Smartphone / PC</option>
                     <option value="Sito Web / Informazioni Generali">Sito Web / Informazioni Generali</option>
                     <option value="Altro...">Altro...</option>
                 </select>
 
-                <textarea name="Messaggio" rows="4" placeholder="Descrivi brevemente la tua richiesta... *" required style="padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid #334155; background: var(--bg-dark); color: var(--text-main); font-size: 0.95rem; resize: vertical;"></textarea>
+                <textarea name="message" rows="4" placeholder="Descrivi brevemente la tua richiesta... *" required style="padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid #334155; background: var(--bg-dark); color: var(--text-main); font-size: 0.95rem; resize: vertical;"></textarea>
 
                 <label style="display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.85rem; color: var(--text-muted); cursor: pointer;">
                     <input type="checkbox" required style="margin-top: 0.25rem; accent-color: var(--accent);">
@@ -394,6 +389,7 @@
 
                 <button type="submit" class="btn btn-primary" style="border: none; cursor: pointer; font-size: 1rem; width: 100%;">Invia Messaggio</button>
             </form>
+
 
             <div style="border-top: 1px solid #334155; padding-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                 <a href="mailto:webromeocaporaso@gmail.com" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 0.5rem;">
@@ -536,10 +532,5 @@
         }
     </script>
     <script src="https://google.com"></script>
-
-
-
-
-
 </body>
 </html>
