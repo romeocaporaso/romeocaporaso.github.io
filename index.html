@@ -80,16 +80,17 @@
         .btn-outline { border: 1px solid var(--accent); color: var(--accent); }
         .btn-outline:hover { background: rgba(56, 189, 248, 0.1); }
 
+        /* Configurazione equilibrata per evitare accavallamenti */
         section { 
-            padding: 0.4rem 5%; 
+            padding: 1.2rem 5%; 
             max-width: 1100px; 
             margin: 0 auto; 
-            scroll-margin-top: 140px; 
+            scroll-margin-top: 100px; 
         }
         h2 { 
             font-size: 2rem; 
             margin-top: 0px;
-            margin-bottom: 0.6rem; 
+            margin-bottom: 0.8rem; 
             text-align: center; 
             display: flex; 
             align-items: center; 
@@ -97,13 +98,22 @@
             gap: 0.6rem; 
             flex-wrap: wrap; 
         }
-        
-        /* Compattazione totale e mirata di tutte le sezioni */
-        #chi-sono { padding-top: 0; margin-top: -2.2rem; }
-        #programmazione { margin-top: -2.5rem; }
-        #progetti { margin-top: -2.5rem; max-width: 1400px; padding-left: 3%; padding-right: 3%; }
-        #riparazioni { margin-top: -2.5rem; }
-        #contatti { margin-top: -2.5rem; }
+        .card { 
+            background: var(--bg-card); 
+            padding: 1.5rem; 
+            border-radius: 12px; 
+            border: 1px solid #334155; 
+            transition: all 0.3s; 
+            margin-bottom: 0px; 
+        }
+
+        /* Allineamento preciso delle sezioni senza sovrapposizioni */
+        #chi-sono { padding-top: 0px; margin-top: -2.2rem; }
+        #programmazione { margin-top: 0px; }
+        #progetti { margin-top: 0px; max-width: 1400px; padding-left: 3%; padding-right: 3%; }
+        #riparazioni { margin-top: 0px; }
+        #contatti { margin-top: 0px; }
+
 
         .title-icon {
             display: inline-flex;
