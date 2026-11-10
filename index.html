@@ -80,17 +80,20 @@
         .btn-outline { border: 1px solid var(--accent); color: var(--accent); }
         .btn-outline:hover { background: rgba(56, 189, 248, 0.1); }
 
-        /* Configurazione equilibrata per evitare accavallamenti */
+        /* Spaziature ottimizzate al millimetro per la massima vicinanza */
         section { 
-            padding: 1.2rem 5%; 
+            padding-top: 1rem;
+            padding-bottom: 0px; 
+            padding-left: 5%;
+            padding-right: 5%;
             max-width: 1100px; 
             margin: 0 auto; 
-            scroll-margin-top: 100px; 
+            scroll-margin-top: 110px; 
         }
         h2 { 
             font-size: 2rem; 
             margin-top: 0px;
-            margin-bottom: 0.8rem; 
+            margin-bottom: 0.6rem; 
             text-align: center; 
             display: flex; 
             align-items: center; 
@@ -98,21 +101,14 @@
             gap: 0.6rem; 
             flex-wrap: wrap; 
         }
-        .card { 
-            background: var(--bg-card); 
-            padding: 1.5rem; 
-            border-radius: 12px; 
-            border: 1px solid #334155; 
-            transition: all 0.3s; 
-            margin-bottom: 0px; 
-        }
 
-        /* Allineamento preciso delle sezioni senza sovrapposizioni */
+        /* Avvicinamento spinto senza accavallamento */
         #chi-sono { padding-top: 0px; margin-top: -2.2rem; }
-        #programmazione { margin-top: 0px; }
-        #progetti { margin-top: 0px; max-width: 1400px; padding-left: 3%; padding-right: 3%; }
-        #riparazioni { margin-top: 0px; }
-        #contatti { margin-top: 0px; }
+        #programmazione { margin-top: -0.8rem; }
+        #progetti { margin-top: -0.8rem; max-width: 1400px; padding-left: 3%; padding-right: 3%; }
+        #riparazioni { margin-top: -0.8rem; }
+        #contatti { margin-top: -0.8rem; }
+
 
 
         .title-icon {
