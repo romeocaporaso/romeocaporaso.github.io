@@ -505,8 +505,6 @@
     
     <div id="google_translate_element" style="display:none;"></div>
     <script>
-        let linguaCorrente = 'it';
-
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'it',
@@ -515,19 +513,34 @@
             }, 'google_translate_element');
         }
 
+        function leggiLinguaAttiva() {
+            return document.cookie.includes('googtrans=/it/en') ? 'en' : 'it';
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const btnTesto = document.getElementById('testo-lingua');
+            if (btnTesto) {
+                btnTesto.textContent = leggiLinguaAttiva() === 'en' ? 'IT' : 'EN';
+            }
+        });
+
         function cambiaLingua() {
-            const combo = document.querySelector('.goog-te-combo');
-            if (!combo) return;
-            if (linguaCorrente === 'it') {
-                combo.value = 'en';
-                combo.dispatchEvent(new Event('change'));
-                document.getElementById('testo-lingua').textContent = 'IT';
-                linguaCorrente = 'en';
+            const dominio = location.hostname;
+            if (leggiLinguaAttiva() === 'it') {
+                document.cookie = 'googtrans=/it/en; path=/';
+                document.cookie = 'googtrans=/it/en; path=/; domain=' + dominio;
+                const combo = document.querySelector('.goog-te-combo');
+                if (combo) {
+                    combo.value = 'en';
+                    combo.dispatchEvent(new Event('change'));
+                    document.getElementById('testo-lingua').textContent = 'IT';
+                } else {
+                    location.reload();
+                }
             } else {
-                combo.value = 'it';
-                combo.dispatchEvent(new Event('change'));
-                document.getElementById('testo-lingua').textContent = 'EN';
-                linguaCorrente = 'it';
+                document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+                document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + dominio;
+                location.reload();
             }
         }
 
