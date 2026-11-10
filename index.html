@@ -183,6 +183,13 @@
                 <svg viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                 Contatti
             </a>
+            
+            <button id="btn-lingua" onclick="cambiaLingua()" style="background: rgba(56, 189, 248, 0.15); border: 1px solid var(--accent); color: var(--accent); padding: 0.35rem 0.75rem; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.35rem; margin-left: 0.5rem;">
+                <svg viewBox="0 0 24 24" style="width: 15px; height: 15px; stroke: currentColor; stroke-width: 2; fill: none;"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <span id="testo-lingua">EN</span>
+            </button>
+
+            
         </nav>
     </header>
 
@@ -452,6 +459,66 @@
                 document.getElementById('cookie-banner').style.display = 'none';
             }
         });
+    </script>
+    <script>
+        let linguaCorrente = 'it';
+
+        const traduzioniEN = {
+            "Chi sono": "About Me",
+            "Programmazione": "Programming",
+            "Progetti": "Projects",
+            "Riparazioni": "Repairs",
+            "Contatti": "Contact",
+            "Sviluppo Software & Assistenza Tecnica": "Software Development & Tech Support",
+            "Unisco la programmazione moderna in Python con supporto AI alla riparazione di smartphone e componenti tecnologici. Soluzioni concrete, veloci e su misura nella zona di Fano e Pesaro-Urbino.": "I combine modern Python programming with AI support and smartphone hardware repair. Practical, fast, and tailored solutions in Fano and Pesaro-Urbino.",
+            "Scopri i servizi Software": "Explore Software Services",
+            "Riparazioni Smartphone": "Smartphone Repairs",
+            "Programmazione &": "Programming &",
+            "Sviluppo AI": "AI Development",
+            "Python & Automazioni": "Python & Automation",
+            "Sviluppo Web & Software con AI": "Web & Software Dev with AI",
+            "Progetti in": "Projects in",
+            "Sviluppo": "Development",
+            "Gestionale Python Multi-CAD": "Multi-CAD Python Manager",
+            "Automazione DXF per Taglio ad Acqua": "DXF Automation for Waterjet Cutting",
+            "Configuratore Tecnico Automatico 3D/2D": "Automatic 3D/2D Technical Configurator",
+            "Riparazioni &": "Repairs &",
+            "Smartphone": "Smartphone",
+            "Sostituzione Display & Batterie": "Screen & Battery Replacement",
+            "Manutenzione Base & Supporto": "Basic Maintenance & Support",
+            "Contatti": "Direct",
+            "Diretti": "Contact"
+        };
+
+        const testiOriginaliIT = new Map();
+
+        function cambiaLingua() {
+            const elementi = document.querySelectorAll('nav a, .hero h1, .hero p, .hero .btn, section h2, section h2 span, .card h3, .card p');
+            
+            if (linguaCorrente === 'it') {
+                elementi.forEach(el => {
+                    const testo = el.textContent.trim();
+                    if (traduzioniEN[testo]) {
+                        if (!testiOriginaliIT.has(el)) testiOriginaliIT.set(el, el.innerHTML);
+                        el.childNodes.forEach(nodo => {
+                            if (nodo.nodeType === 3 && nodo.textContent.trim() !== '') {
+                                nodo.textContent = ' ' + traduzioniEN[testo];
+                            }
+                        });
+                    }
+                });
+                document.getElementById('testo-lingua').textContent = 'IT';
+                document.documentElement.lang = 'en';
+                linguaCorrente = 'en';
+            } else {
+                testiOriginaliIT.forEach((htmlOriginale, el) => {
+                    el.innerHTML = htmlOriginale;
+                });
+                document.getElementById('testo-lingua').textContent = 'EN';
+                document.documentElement.lang = 'it';
+                linguaCorrente = 'it';
+            }
+        }
     </script>
 </body>
 </html>
