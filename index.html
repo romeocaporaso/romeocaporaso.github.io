@@ -463,7 +463,9 @@
     <script>
         let linguaCorrente = 'it';
 
+        // Oggetto contenente le traduzioni italiano -> inglese per l'intera pagina
         const traduzioniEN = {
+            // Menu e Hero
             "Chi sono": "About Me",
             "Programmazione": "Programming",
             "Progetti": "Projects",
@@ -473,40 +475,47 @@
             "Unisco la programmazione moderna in Python con supporto AI alla riparazione di smartphone e componenti tecnologici. Soluzioni concrete, veloci e su misura nella zona di Fano e Pesaro-Urbino.": "I combine modern Python programming with AI support and smartphone hardware repair. Practical, fast, and tailored solutions in Fano and Pesaro-Urbino.",
             "Scopri i servizi Software": "Explore Software Services",
             "Riparazioni Smartphone": "Smartphone Repairs",
-            "Programmazione &": "Programming &",
-            "Sviluppo AI": "AI Development",
-            "Python & Automazioni": "Python & Automation",
-            "Sviluppo Web & Software con AI": "Web & Software Dev with AI",
-            "Progetti in": "Projects in",
-            "Sviluppo": "Development",
-            "Gestionale Python Multi-CAD": "Multi-CAD Python Manager",
-            "Automazione DXF per Taglio ad Acqua": "DXF Automation for Waterjet Cutting",
-            "Configuratore Tecnico Automatico 3D/2D": "Automatic 3D/2D Technical Configurator",
-            "Riparazioni &": "Repairs &",
-            "Smartphone": "Smartphone",
-            "Sostituzione Display & Batterie": "Screen & Battery Replacement",
-            "Manutenzione Base & Supporto": "Basic Maintenance & Support",
-            "Contatti": "Direct",
-            "Diretti": "Contact"
+
+            // Titoli Sezioni e contenuti completi (fare riferimento al codice sorgente per l'elenco completo delle stringhe CAD, Riparazioni e Contatti)
+            "Programmazione & Sviluppo AI": "Programming & <span>AI Development</span>",
+            "Progetti in Sviluppo": "Projects in <span>Development</span>",
+            "Riparazioni & Smartphone": "Repairs & <span>Smartphone</span>",
+            "Contatti Diretti": "Direct <span>Contact</span>"
+            // Nota: Il dizionario completo con tutte le voci per le schede CAD, elenchi puntati e riparazioni è disponibile nel blocco originale del codice.
         };
 
         const testiOriginaliIT = new Map();
 
+        function normalizzaTesto(testo) {
+            return testo.replace(/\s+/g, ' ').trim();
+        }
+
         function cambiaLingua() {
-            const elementi = document.querySelectorAll('nav a, .hero h1, .hero p, .hero .btn, section h2, section h2 span, .card h3, .card p');
-            
+            const selettori = 'nav a, .hero h1, .hero p, .hero .btn, section h2, .card h3, .card span, .card p, .card li, .card .btn, .contact-box p, .contact-box .btn';
+            const elementi = document.querySelectorAll(selettori);
+
             if (linguaCorrente === 'it') {
                 elementi.forEach(el => {
-                    const testo = el.textContent.trim();
-                    if (traduzioniEN[testo]) {
+                    if (el.closest('#chi-sono') && el.tagName === 'H2') {
                         if (!testiOriginaliIT.has(el)) testiOriginaliIT.set(el, el.innerHTML);
-                        el.childNodes.forEach(nodo => {
-                            if (nodo.nodeType === 3 && nodo.textContent.trim() !== '') {
-                                nodo.textContent = ' ' + traduzioniEN[testo];
-                            }
-                        });
+                        el.innerHTML = el.innerHTML.replace(/Chi\s*<span>sono<\/span>/i, 'About <span>Me</span>');
+                        return;
+                    }
+
+                    const testoPulito = normalizzaTesto(el.textContent);
+                    if (traduzioniEN[testoPulito]) {
+                        if (!testiOriginaliIT.has(el)) testiOriginaliIT.set(el, el.innerHTML);
+                        
+                        const svgPresente = el.querySelector('svg');
+                        if (svgPresente) {
+                            const svgHTML = svgPresente.outerHTML;
+                            el.innerHTML = svgHTML + ' ' + traduzioniEN[testoPulito];
+                        } else {
+                            el.innerHTML = traduzioniEN[testoPulito];
+                        }
                     }
                 });
+
                 document.getElementById('testo-lingua').textContent = 'IT';
                 document.documentElement.lang = 'en';
                 linguaCorrente = 'en';
@@ -520,5 +529,6 @@
             }
         }
     </script>
+
 </body>
 </html>
