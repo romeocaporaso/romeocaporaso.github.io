@@ -165,11 +165,14 @@
             stroke-linejoin: round;
             flex-shrink: 0;
         }
-                @media (max-width: 768px) {
+        @media (max-width: 768px) {
             header {
                 flex-direction: column;
                 padding: 0.9rem 3%;
                 gap: 0.8rem;
+            }
+            .hero h1 {
+                font-size: 1.95rem;
             }
             nav {
                 display: flex;
@@ -183,10 +186,15 @@
                 margin-left: 0;
                 font-size: 0.85rem;
             }
+            h2 {
+                margin-bottom: 1.2rem;
+                font-size: 1.7rem;
+            }
             section {
                 scroll-margin-top: 135px;
             }
         }
+
         .goog-te-banner-frame.skiptranslate, .skiptranslate > iframe { display: none !important; }
         body { top: 0px !important; }
     </style>
@@ -233,7 +241,7 @@
     </header>
 
     <div class="hero">
-        <h1>Sviluppo Software & <span>Assistenza Tecnica</span></h1>
+        <h1>Sviluppo Software &amp; <span style="white-space: nowrap;">Assistenza Tecnica</span></h1>
         <p>Unisco la programmazione moderna in Python con supporto AI alla riparazione di smartphone e componenti tecnologici.<br>Soluzioni concrete, veloci e su misura nelle Marche e da remoto.</p>
 
         <div class="btn-group">
