@@ -78,20 +78,24 @@
         .btn-outline:hover { background: rgba(56, 189, 248, 0.1); }
 
         section { padding: 1.8rem 5%; max-width: 1100px; margin: 0 auto; scroll-margin-top: 95px; }
-        h2 { font-size: 2rem; margin-bottom: 1.2rem; text-align: center; }
-
-
-                .title-icon {
+                h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+        .title-icon {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            vertical-align: middle;
-            margin-right: 0.6rem;
             color: var(--accent);
         }
         .title-icon svg {
-            width: 28px;
-            height: 28px;
+            width: 30px;
+            height: 30px;
             stroke: currentColor;
             stroke-width: 2;
             fill: none;
