@@ -151,23 +151,47 @@
 
     <section id="progetti">
         <h2>Progetti in <span>Sviluppo</span></h2>
-        <div class="card" style="border-left: 4px solid var(--accent);">
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
-                <h3 style="margin-bottom: 0;">Gestionale Python Multi-CAD (SolidWorks, Solid Edge, Creo, AutoCAD, nanoCAD)</h3>
-                <span style="background: rgba(56, 189, 248, 0.15); color: var(--accent); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">In Sviluppo &amp; Ricerca</span>
+        <div class="grid">
+            <!-- Scheda 1: Gestionale Multi-CAD -->
+            <div class="card" style="border-left: 4px solid var(--accent); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+                        <h3 style="margin-bottom: 0;">Gestionale Python Multi-CAD</h3>
+                        <span style="background: rgba(56, 189, 248, 0.15); color: var(--accent); padding: 0.25rem 0.7rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">In Sviluppo</span>
+                    </div>
+                    <p style="margin-bottom: 1rem;">Applicativo desktop in <strong>Python</strong> progettato per velocizzare l'organizzazione e la gestione dei progetti tecnici 2D e 3D:</p>
+                    <ul>
+                        <li><strong>Lettura automatica cartelle:</strong> scansione rapida e indicizzazione delle directory di commessa.</li>
+                        <li><strong>Drag &amp; Drop Multi-CAD:</strong> supporto attivo per <strong>SolidWorks</strong> e studio di integrazione per <strong>Solid Edge</strong>, <strong>PTC Creo</strong>, <strong>AutoCAD</strong> e <strong>nanoCAD</strong>.</li>
+                        <li><strong>Catalogazione rapida:</strong> riduzione dei tempi di ricerca di parti, assiemi e tavole tecniche.</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <a href="mailto:webromeocaporaso@://gmail.com" class="btn btn-outline" style="display: inline-block; width: 100%; text-align: center;">Richiedi info o collabora</a>
+                </div>
             </div>
-            <p style="margin-bottom: 1rem;">Sto sviluppando e ampliando un applicativo desktop su misura realizzato in <strong>Python</strong> progettato per velocizzare l'organizzazione e la gestione dei progetti tecnici 2D e 3D:</p>
-            <ul>
-                <li><strong>Lettura automatica delle cartelle:</strong> scansione rapida e indicizzazione strutturata delle directory di commessa.</li>
-                <li><strong>Drag &amp; Drop Multi-CAD:</strong> supporto già attivo per file <strong>SolidWorks</strong> (`.sldprt`, `.sldasm`, `.slddrw`) e studio di integrazione in corso per <strong>Solid Edge</strong>, <strong>PTC Creo</strong>, <strong>AutoCAD</strong> e <strong>nanoCAD</strong> (`.prt`, `.asm`, `.drw`, `.par`, `.dwg`, `.dxf`).</li>
 
-                <li><strong>Automazione flusso di lavoro:</strong> catalogazione centralizzata e riduzione dei tempi di ricerca dei disegni tecnici.</li>
-            </ul>
-            <div style="margin-top: 1.5rem;">
-                <a href="mailto:webromeocaporaso@://gmail.com" class="btn btn-outline" style="display: inline-block;">Richiedi informazioni o collabora al test</a>
+            <!-- Scheda 2: Automazione DXF per Taglio ad Acqua -->
+            <div class="card" style="border-left: 4px solid var(--accent); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+                        <h3 style="margin-bottom: 0;">Automazione DXF per Taglio ad Acqua</h3>
+                        <span style="background: rgba(56, 189, 248, 0.15); color: var(--accent); padding: 0.25rem 0.7rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Prototipo Funzionante</span>
+                    </div>
+                    <p style="margin-bottom: 1rem;">Strumento in <strong>Python</strong> sviluppato per automatizzare la preparazione e la pulizia dei disegni 2D prima della generazione del percorso utensile:</p>
+                    <ul>
+                        <li><strong>Lettura e manipolazione DXF:</strong> modifica automatica di geometrie, layer e dettagli secondo le specifiche richieste dal cliente.</li>
+                        <li><strong>Velocizzazione flusso CAM:</strong> preparazione rapida del file ottimizzato per generare il codice <strong>NC</strong> per macchine a <strong>taglio ad acqua (Waterjet)</strong>.</li>
+                        <li><strong>Riduzione errori manuali:</strong> eliminazione delle operazioni ripetitive al CAD prima del taglio.</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <a href="mailto:webromeocaporaso@://gmail.com" class="btn btn-outline" style="display: inline-block; width: 100%; text-align: center;">Richiedi informazioni</a>
+                </div>
             </div>
         </div>
     </section>
+
 
 
 
