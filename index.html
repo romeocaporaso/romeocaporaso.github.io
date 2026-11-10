@@ -361,19 +361,49 @@
             Contatti <span>Diretti</span>
         </h2>
         <div class="contact-box">
-            <p style="margin-bottom: 1.5rem; color: var(--text-muted);">Hai bisogno di un preventivo per un software, un'automazione o una riparazione smartphone in zona Fano / Pesaro-Urbino? Scrivimi direttamente o segui gli aggiornamenti sul canale:</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="mailto:webromeocaporaso@gmail.com" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+            <p style="margin-bottom: 1.5rem; color: var(--text-muted);">Hai bisogno di un preventivo per un software Python, un'automazione CAD o una riparazione smartphone in zona Fano / Pesaro-Urbino? Compila il modulo qui sotto oppure usa i collegamenti rapidi:</p>
+
+            <!-- Modulo di contatto diretto tramite Formsubmit -->
+            <form action="https://formsubmit.co" method="POST" style="max-width: 600px; margin: 0 auto 2rem; text-align: left; display: flex; flex-direction: column; gap: 1rem;">
+                <!-- Configurazioni Formsubmit -->
+                <input type="hidden" name="_subject" value="Nuovo messaggio dal sito web Romeo Caporaso!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://github.io">
+
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <input type="text" name="Nome" placeholder="Il tuo Nome *" required style="flex: 1; min-width: 200px; padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid #334155; background: var(--bg-dark); color: var(--text-main); font-size: 0.95rem;">
+                    <input type="email" name="Email" placeholder="La tua Email *" required style="flex: 1; min-width: 200px; padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid #334155; background: var(--bg-dark); color: var(--text-main); font-size: 0.95rem;">
+                </div>
+
+                <select name="Servizio" style="padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid #334155; background: var(--bg-dark); color: var(--text-main); font-size: 0.95rem;">
+                    <option value="Programmazione Python / Automazioni CAD">Programmazione Python / Automazioni CAD</option>
+                    <option value="Riparazione Smartphone / PC">Riparazione Smartphone / PC</option>
+                    <option value="Sito Web / Altro">Sito Web / Informazioni Generali</option>
+                </select>
+
+                <textarea name="Messaggio" rows="4" placeholder="Descrivi brevemente la tua richiesta... *" required style="padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid #334155; background: var(--bg-dark); color: var(--text-main); font-size: 0.95rem; resize: vertical;"></textarea>
+
+                <label style="display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.85rem; color: var(--text-muted); cursor: pointer;">
+                    <input type="checkbox" required style="margin-top: 0.25rem; accent-color: var(--accent);">
+                    <span>Acconsento al trattamento dei dati inseriti per ricevere risposta alla mia richiesta, secondo la <a href="javascript:void(0)" onclick="apriPrivacy()" style="color: var(--accent); text-decoration: underline;">Privacy Policy</a>. *</span>
+                </label>
+
+                <button type="submit" class="btn btn-primary" style="border: none; cursor: pointer; font-size: 1rem; width: 100%;">Invia Messaggio</button>
+            </form>
+
+            <div style="border-top: 1px solid #334155; padding-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="mailto:webromeocaporaso@gmail.com" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 0.5rem;">
                     <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; stroke: currentColor; stroke-width: 2; fill: none;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                     webromeocaporaso@gmail.com
                 </a>
-                <a href="https://whatsapp.com/channel/0029Vb8xoCVFi8xbD8Dc5J1s" target="_blank" rel="noopener noreferrer" class="btn" style="background-color: #25D366; color: #0f172a; display: inline-flex; align-items: center; gap: 0.5rem;">
+                <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="btn" style="background-color: #25D366; color: #0f172a; display: inline-flex; align-items: center; gap: 0.6rem;">
                     <svg viewBox="0 0 24 24" style="width: 30px; height: 30px; fill: currentColor; flex-shrink: 0;"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
                     Segui il Canale WhatsApp
                 </a>
             </div>
         </div>
     </section>
+
 
 
     <footer>
