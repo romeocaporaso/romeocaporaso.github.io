@@ -745,5 +745,29 @@
             });
         }
     </script>
+    <script>
+        /* Aggiornamento barra di avanzamento lettura */
+        window.addEventListener('scroll', () => {
+            const altezzaTotale = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const percentuale = altezzaTotale > 0 ? (window.scrollY / altezzaTotale) * 100 : 0;
+            const barra = document.getElementById('barra-lettura');
+            if (barra) barra.style.width = percentuale + '%';
+        });
+
+        /* Precompilazione automatica modulo contatti */
+        function precompilaContatto(nomeProgetto) {
+            const selectServizio = document.querySelector('select[name="servizio"], select[name="Servizio"]');
+            const textareaMessaggio = document.querySelector('textarea[name="message"], textarea[name="Messaggio"]');
+            
+            if (selectServizio) {
+                selectServizio.value = 'Programmazione Python / Automazioni CAD';
+            }
+            if (textareaMessaggio) {
+                textareaMessaggio.value = 'Ciao Romeo, vorrei ricevere maggiori informazioni sul progetto: ' + nomeProgetto + '.';
+                setTimeout(() => textareaMessaggio.focus(), 600);
+            }
+        }
+    </script>
+
 </body>
 </html>
