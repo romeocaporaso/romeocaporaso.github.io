@@ -3,20 +3,15 @@
 <head>
 
     <meta name="google-site-verification" content="JdejUf0ZAf5bAFSmm0bzKRuuTEzzFlPKpMULei-Uewk" />
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romeo Caporaso | Sviluppo Software & Assistenza Tecnica</title>
     <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
-
-
     <meta name="description" content="Romeo Caporaso: sviluppo software, script Python con AI, siti web e riparazione display e batterie smartphone nelle Marche e da remoto.">
     <meta property="og:description" content="Programmazione Python con supporto AI, siti web, automazioni e riparazione hardware. Operativo nelle Marche e online.">
-
-
-    
+   
     <!-- Tag Open Graph corretti per Facebook, WhatsApp e Social -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://romeocaporaso.github.io/">
@@ -25,7 +20,6 @@
     <meta property="og:title" content="Romeo Caporaso | Sviluppo Software & Assistenza Tecnica">
     <meta property="og:description" content="Programmazione Python con supporto AI, siti web, automazioni e riparazione display e batterie smartphone. Marche / Centro Italia o da remoto.">
     
-
     <style>
          html { scroll-behavior: smooth; }
         section { padding: 0.8rem 5%; max-width: 1100px; margin: 0 auto; scroll-margin-top: 95px; }
@@ -33,15 +27,12 @@
         .hero { padding: 1.5rem 3% 2rem; text-align: center; max-width: 1200px; margin: 0 auto; }
         #chi-sono { padding-top: 1.2rem; margin-top: 0px; }
 
-
         #chi-sono h2 { margin-bottom: 0.8rem; }
         /* Avvicina in modo mirato le sezioni successive */
         #programmazione { margin-top: -1rem; }
         #progetti { margin-top: -1rem; max-width: 1400px; padding-left: 3%; padding-right: 3%; }
         #riparazioni { margin-top: -1rem; }
         #contatti { margin-top: -1rem; }
-
-
 
         :root {
             --bg-dark: #0f172a;
@@ -101,15 +92,12 @@
             flex-wrap: wrap; 
         }
 
-
         /* Gestione altezze senza accavallamenti né spazi eccessivi */
         
         #programmazione { margin-top: 0px; }
         #progetti { margin-top: 0px; max-width: 1400px; padding-left: 3%; padding-right: 3%; }
         #riparazioni { margin-top: 0px; }
         #contatti { margin-top: 0px; }
-
-
 
         .title-icon {
             display: inline-flex;
@@ -164,38 +152,44 @@
             stroke-linejoin: round;
             flex-shrink: 0;
         }
+        
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
-                padding: 0.9rem 3%;
-                gap: 0.8rem;
+                padding: 1rem 3%;
+                gap: 0.9rem;
             }
             .hero h1 {
                 white-space: nowrap;
                 font-size: 4.3vw;
             }
-
             nav {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 0.75rem 1rem;
+                gap: 0.9rem 1.2rem;
                 width: 100%;
             }
             nav a {
                 margin-left: 0;
-                font-size: 0.85rem;
+                font-size: 1.05rem;
+                font-weight: 600;
+                gap: 0.45rem;
+                padding: 0.25rem 0.4rem;
+            }
+            nav a svg {
+                width: 22px;
+                height: 22px;
             }
             h2 {
                 margin-bottom: 1.2rem;
                 font-size: 1.7rem;
             }
             section {
-                scroll-margin-top: 135px;
+                scroll-margin-top: 165px;
             }
         }
-
         .goog-te-banner-frame.skiptranslate, .skiptranslate > iframe { display: none !important; }
         body { top: 0px !important; }
     </style>
@@ -235,9 +229,7 @@
             <button id="btn-lingua" onclick="cambiaLingua()" style="background: rgba(56, 189, 248, 0.15); border: 1px solid var(--accent); color: var(--accent); padding: 0.35rem 0.75rem; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.35rem; margin-left: 0.5rem;">
                 <svg viewBox="0 0 24 24" style="width: 15px; height: 15px; stroke: currentColor; stroke-width: 2; fill: none;"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                 <span id="testo-lingua">EN</span>
-            </button>
-
-            
+            </button>   
         </nav>
     </header>
 
@@ -365,8 +357,7 @@
             </div>         
         </div>
     </section>
-
-    
+   
     <section id="riparazioni">
         <h2>
             <span class="title-icon">
@@ -407,7 +398,6 @@
         <div class="contact-box">
             <p style="margin-bottom: 1.5rem; color: var(--text-muted);">Hai bisogno di un preventivo per un software Python, un'automazione CAD o una riparazione smartphone? Compila il modulo qui sotto oppure usa i collegamenti rapidi:</p>
 
-
             <!-- Modulo di contatto diretto tramite Formsubmit -->
             <form action="https://formsubmit.co/webromeocaporaso@gmail.com" method="POST" style="max-width: 600px; margin: 0 auto 2rem; text-align: left; display: flex; flex-direction: column; gap: 1rem;">
                 <input type="hidden" name="_subject" value="Nuovo messaggio dal sito web Romeo Caporaso!">
@@ -435,7 +425,6 @@
                 <button type="submit" class="btn btn-primary" style="border: none; cursor: pointer; font-size: 1rem; width: 100%;">Invia Messaggio</button>
             </form>
 
-
             <div style="border-top: 1px solid #334155; padding-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                 <a href="mailto:webromeocaporaso@gmail.com" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 0.5rem;">
                     <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; stroke: currentColor; stroke-width: 2; fill: none;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
@@ -450,8 +439,6 @@
         </div>
     </section>
 
-
-
     <footer>
         <p>&copy; 2026 Romeo Caporaso - Sviluppo Software & Assistenza Tecnica</p>
         <p style="margin-top: 0.6rem; font-size: 0.85rem;">
@@ -459,8 +446,7 @@
             <a href="javascript:void(0)" onclick="riapriBannerCookie()" style="color: var(--accent); text-decoration: none; margin: 0 0.5rem;">Gestisci preferenze cookie</a>
         </p>
     </footer>
-
-    
+   
     <!-- Finestra Informativa Privacy & Cookie Policy -->
     <div id="privacy-modal" style="display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.85); z-index: 1000; justify-content: center; align-items: center; padding: 1rem;">
         <div style="background: #1e293b; border: 1px solid #38bdf8; border-radius: 12px; max-width: 650px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 2rem; color: #f8fafc;">
@@ -596,7 +582,6 @@
             document.body.appendChild(gt);
         })();
     </script>
-
     <script src="https://google.com"></script>
 </body>
 </html>
