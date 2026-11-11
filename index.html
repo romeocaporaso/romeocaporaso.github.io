@@ -168,9 +168,51 @@
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
-                padding: 1rem 3%;
+                padding: 1rem 2%;
                 gap: 0.9rem;
             }
+            /* Logo e scritte più grandi su mobile */
+            header .logo img {
+                width: 68px !important;
+                height: 68px !important;
+            }
+            header .logo div span:first-child {
+                font-size: 1.55rem !important;
+            }
+            header .logo div span:last-child {
+                font-size: 1.05rem !important;
+            }
+
+            /* Menu disposto esattamente su 2 righe (3 voci sopra + 3 voci sotto) */
+            nav {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 0.65rem 0.6rem;
+                width: 100%;
+                max-width: 390px;
+                margin: 0 auto;
+            }
+            nav a {
+                margin-left: 0;
+                font-size: 0.92rem;
+                font-weight: 600;
+                gap: 0.3rem;
+                padding: 0.2rem 0.25rem;
+                white-space: nowrap;
+            }
+            nav a svg {
+                width: 18px;
+                height: 18px;
+            }
+            #btn-lingua {
+                margin-left: 0 !important;
+                padding: 0.28rem 0.65rem !important;
+                font-size: 0.85rem !important;
+            }
+
             .hero {
                 padding-left: 2%;
                 padding-right: 2%;
@@ -180,34 +222,15 @@
                 font-size: 4.5vw;
                 letter-spacing: -0.3px;
             }
-
-            nav {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 0.9rem 1.2rem;
-                width: 100%;
-            }
-            nav a {
-                margin-left: 0;
-                font-size: 1.05rem;
-                font-weight: 600;
-                gap: 0.45rem;
-                padding: 0.25rem 0.4rem;
-            }
-            nav a svg {
-                width: 22px;
-                height: 22px;
-            }
             h2 {
                 margin-bottom: 1.2rem;
                 font-size: 1.7rem;
             }
             section {
-                scroll-margin-top: 165px;
+                scroll-margin-top: 175px;
             }
         }
+
         .goog-te-banner-frame.skiptranslate, .skiptranslate > iframe { display: none !important; }
         body { top: 0px !important; }
     </style>
