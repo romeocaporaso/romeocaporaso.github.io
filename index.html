@@ -318,9 +318,30 @@
                 height: 44px;
             }
         }
+        /* Barra di avanzamento lettura in cima */
+        #barra-lettura {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0%;
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            z-index: 2000;
+            transition: width 0.1s ease-out;
+        }
+
+        /* Effetto sollevamento e bagliore azzurro sulle schede */
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.18);
+        }
+
     </style>
 </head>
 <body>
+    <div id="barra-lettura"></div>
+
     <header>
         <a href="#" class="logo" style="display: flex; align-items: center; gap: 0.75rem;">
             <img src="logo.jpg" alt="Logo Code & Fix by RC" style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover; border: 1px solid #334155;">
@@ -435,7 +456,7 @@
                     </ul>
                 </div>
                 <div style="margin-top: 1.5rem;">
-                    <a href="#contatti" class="btn btn-outline" style="display: inline-block; width: 100%; text-align: center;">Richiedi informazioni</a>
+                    <a href="#contatti" onclick="precompilaContatto('Gestionale Python Multi-CAD')" class="btn btn-outline" style="display: inline-block; width: 100%; text-align: center;">Richiedi informazioni</a>
                 </div>
             </div>
 
@@ -454,7 +475,7 @@
                     </ul>
                 </div>
                 <div style="margin-top: 1.5rem;">
-                    <a href="#contatti" class="btn btn-outline" style="display: inline-block; width: 100%; text-align: center;">Richiedi informazioni</a>
+                    <a href="#contatti" onclick="precompilaContatto('Automazione DXF per Taglio ad Acqua')" class="btn btn-outline" style="display: inline-block; width: 100%; text-align: center;">Richiedi informazioni</a>
                 </div>
             </div>
 
@@ -473,7 +494,7 @@
                     </ul>
                 </div>
                 <div style="margin-top: 1.5rem;">
-                    <a href="#contatti" class="btn btn-outline" style="display: inline-block; width: 100%; text-align: center;">Richiedi informazioni</a>
+                    <a href="#contatti" onclick="precompilaContatto('Configuratore Tecnico Automatico 3D/2D')" class="btn btn-outline" style="display: inline-block; width: 100%; text-align: center;">Richiedi informazioni</a>
                 </div>
             </div>         
         </div>
