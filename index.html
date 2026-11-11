@@ -279,6 +279,35 @@
 
         .goog-te-banner-frame.skiptranslate, .skiptranslate > iframe { display: none !important; }
         body { top: 0px !important; }
+                #btn-torna-su {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            color: #0f172a;
+            border: none;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.4);
+            z-index: 999;
+            transition: transform 0.2s, opacity 0.3s;
+        }
+        #btn-torna-su:hover {
+            transform: translateY(-3px);
+        }
+        @media (max-width: 768px) {
+            #btn-torna-su {
+                bottom: 18px;
+                right: 18px;
+                width: 44px;
+                height: 44px;
+            }
+        }
     </style>
 </head>
 <body>
