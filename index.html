@@ -19,7 +19,7 @@
     <meta property="og:description" content="Programmazione Python con supporto AI, siti web, automazioni e riparazione display e batterie smartphone. Marche / Centro Italia o da remoto.">
     
     <style>
-         html { scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; }
         section { padding: 0.8rem 5%; max-width: 1100px; margin: 0 auto; scroll-margin-top: 95px; }
         .card { background: var(--bg-card); padding: 1.5rem; border-radius: 12px; border: 1px solid #334155; transition: all 0.3s; margin-bottom: 0px; }
         .hero {
@@ -134,7 +134,7 @@
 
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
-         #progetti { max-width: 1400px; padding-left: 3%; padding-right: 3%; }
+        #progetti { max-width: 1400px; padding-left: 3%; padding-right: 3%; }
 
         .card {
             background: var(--bg-card); padding: 2rem; border-radius: 12px;
@@ -142,6 +142,7 @@
         }
         .card:hover { transform: translateY(-5px); border-color: var(--accent); }
         .card h3 { color: var(--accent); margin-bottom: 0.8rem; font-size: 1.3rem; }
+        .card .subtitle { color: var(--accent); font-weight: 700; text-align: center; }
         .card ul { list-style: none; margin-top: 1rem; color: var(--text-muted); }
         .card ul li { margin-bottom: 0.5rem; padding-left: 1.2rem; position: relative; }
         .card ul li::before { content: "▹"; position: absolute; left: 0; color: var(--accent); }
@@ -449,75 +450,71 @@
         </h2>
 
         <div class="grid-3">
-            <!-- Scheda 1: Gestionale Multi-CAD -->
+            <!-- Scheda Unificata: Suite Python CAD / CAM / Configurazione -->
             <div class="card" style="border-left: 4px solid var(--accent); display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
-                        <h3 style="margin-bottom: 0;">Gestionale Python Multi-CAD</h3>
-                        <span style="background: rgba(56, 189, 248, 0.15); color: var(--accent); padding: 0.25rem 0.7rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">In Sviluppo</span>
+                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.45rem; margin-bottom: 1rem;">
+                        <div style="display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;">
+                            <svg viewBox="0 0 24 24" style="width: 28px; height: 28px; stroke: var(--accent); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0;">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                            <h3 style="margin-bottom: 0; font-size: 1.55rem;">Suite Python Multi-CAD &amp; Automazione Tecnica</h3>
+                        </div>
+                        <span style="background: rgba(56, 189, 248, 0.15); color: var(--accent); padding: 0.25rem 0.7rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">In Sviluppo &amp; Prototipi</span>
                     </div>
-                    <p style="margin-bottom: 1rem;">Applicativo desktop in <strong>Python</strong> progettato per velocizzare l'organizzazione e la gestione dei progetti tecnici 2D e 3D:</p>
-                    <ul>
-                        <li><strong>Lettura automatica cartelle:</strong> scansione rapida e indicizzazione delle directory di commessa.</li>
-                        <li><strong>Drag &amp; Drop Multi-CAD:</strong> supporto attivo per <strong>SolidWorks</strong> e studio di integrazione per <strong>Solid Edge</strong>, <strong>PTC Creo</strong>, <strong>AutoCAD</strong> e <strong>nanoCAD</strong>.</li>
-                        <li><strong>Catalogazione rapida:</strong> riduzione dei tempi di ricerca di parti, assiemi e tavole tecniche.</li>
-                    </ul>
-                </div>
-                <div style="margin-top: 1.5rem;">
-                    <a href="#contatti" onclick="precompilaContatto('Gestionale Python Multi-CAD')" class="btn btn-outline" style="display: inline-block; width: 100%; text-align: center;">Richiedi informazioni</a>
-                </div>
-            </div>
 
-            <!-- Scheda 2: Automazione DXF per Taglio ad Acqua -->
-            <div class="card" style="border-left: 4px solid var(--accent); display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
-                        <h3 style="margin-bottom: 0;">Automazione DXF per Taglio ad Acqua</h3>
-                        <span style="background: rgba(56, 189, 248, 0.15); color: var(--accent); padding: 0.25rem 0.7rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Prototipo</span>
-                    </div>
-                    <p style="margin-bottom: 1rem;">Strumento in <strong>Python</strong> sviluppato per automatizzare la preparazione e la pulizia dei disegni 2D prima della generazione del percorso utensile:</p>
-                    <ul>
-                        <li><strong>Lettura e manipolazione DXF:</strong> modifica automatica di geometrie, layer e dettagli secondo le specifiche richieste dal cliente.</li>
-                        <li><strong>Velocizzazione flusso CAM:</strong> preparazione rapida del file ottimizzato per generare il codice <strong>NC</strong> per macchine a <strong>taglio ad acqua (Waterjet)</strong>.</li>
-                        <li><strong>Riduzione errori manuali:</strong> eliminazione delle operazioni ripetitive al CAD prima del taglio.</li>
-                    </ul>
-                </div>
-                <div style="margin-top: 1.5rem;">
-                    <a href="#contatti" onclick="precompilaContatto('Automazione DXF per Taglio ad Acqua')" class="btn btn-outline" style="display: inline-block; width: 100%; text-align: center;">Richiedi informazioni</a>
-                </div>
-            </div>
+                    <p style="margin-bottom: 1rem; text-align: justify;">Raccolta di applicativi desktop in <strong>Python</strong> per velocizzare la gestione dei progetti tecnici 2D/3D, la preparazione CAM e la configurazione guidata:</p>
 
-            <!-- Scheda 3: Configuratore Tecnico 3D/2D Prototipo -->
-            <div class="card" style="border-left: 4px solid var(--accent); display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
-                        <h3 style="margin-bottom: 0;">Configuratore Tecnico Automatico 3D/2D</h3>
-                        <span style="background: rgba(56, 189, 248, 0.15); color: var(--accent); padding: 0.25rem 0.7rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Prototipo</span>
-                    </div>
-                    <p style="margin-bottom: 1rem;">Applicativo sviluppato in <strong>Python</strong> per la configurazione guidata di prodotti e macchinari partendo dalla selezione dei componenti commerciali:</p>
+                    <div class="subtitle" style="margin-top: 12px; margin-bottom: 8px; font-size: 1.05rem;">Gestionale Python Multi-CAD</div>
                     <ul>
-                        <li><strong>Selezione guidata tramite menu a tendina:</strong> scelta rapida di componenti commerciali, varianti e parametri tecnici senza possibilità di errore.</li>
-                        <li><strong>Generazione automatica 3D e Tavole 2D:</strong> creazione istantanea di parti, assiemi 3D aggiornati e messe in tavola pronte per l'officina.</li>
-                        <li><strong>Distinte Base (BOM) automatiche:</strong> estrazione immediata ed esatta dell'elenco componenti e materiali.</li>
+                        <li style="text-align: justify;"><strong>Lettura automatica cartelle:</strong> scansione rapida e indicizzazione delle directory di commessa.</li>
+                        <li style="text-align: justify;"><strong>Drag &amp; Drop Multi-CAD:</strong> supporto attivo per <strong>SolidWorks</strong> e studio di integrazione per <strong>Solid Edge</strong>, <strong>PTC Creo</strong>, <strong>AutoCAD</strong> e <strong>nanoCAD</strong>.</li>
+                        <li style="text-align: justify;"><strong>Catalogazione rapida:</strong> riduzione dei tempi di ricerca di parti, assiemi e tavole tecniche.</li>
+                    </ul>
+
+                    <div class="subtitle" style="margin-top: 14px; margin-bottom: 8px; font-size: 1.05rem;">Automazione DXF per Taglio ad Acqua</div>
+                    <ul>
+                        <li style="text-align: justify;"><strong>Lettura e manipolazione DXF:</strong> modifica automatica di geometrie, layer e dettagli secondo le specifiche richieste dal cliente.</li>
+                        <li style="text-align: justify;"><strong>Velocizzazione flusso CAM:</strong> preparazione rapida del file ottimizzato per generare il codice <strong>NC</strong> per macchine a <strong>taglio ad acqua (Waterjet)</strong>.</li>
+                        <li style="text-align: justify;"><strong>Riduzione errori manuali:</strong> eliminazione delle operazioni ripetitive al CAD prima del taglio.</li>
+                    </ul>
+
+                    <div class="subtitle" style="margin-top: 14px; margin-bottom: 8px; font-size: 1.05rem;">Configuratore Tecnico Automatico 3D/2D</div>
+                    <ul>
+                        <li style="text-align: justify;"><strong>Selezione guidata tramite menu a tendina:</strong> scelta rapida di componenti commerciali, varianti e parametri tecnici senza possibilità di errore.</li>
+                        <li style="text-align: justify;"><strong>Generazione automatica 3D e Tavole 2D:</strong> creazione istantanea di parti, assiemi 3D aggiornati e messe in tavola pronte per l'officina.</li>
+                        <li style="text-align: justify;"><strong>Distinte Base (BOM) automatiche:</strong> estrazione immediata ed esatta dell'elenco componenti e materiali.</li>
                     </ul>
                 </div>
                 <div style="margin-top: 1.5rem;">
-                    <a href="#contatti" onclick="precompilaContatto('Configuratore Tecnico Automatico 3D/2D')" class="btn btn-outline" style="display: inline-block; width: 100%; text-align: center;">Richiedi informazioni</a>
+                    <a href="#contatti" onclick="precompilaContatto('Suite Python Multi-CAD & Automazione Tecnica')" class="btn btn-outline" style="display: inline-block; width: 100%; text-align: center;">Richiedi informazioni</a>
                 </div>
             </div>
 
             <!-- Scheda 4: ClickManager (Prototipo in Sviluppo) -->
             <div class="card" style="border-left: 4px solid var(--accent); display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
-                        <h3 style="margin-bottom: 0;">ClickManager</h3>
+                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.45rem; margin-bottom: 1rem;">
+                        <div style="display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;">
+                            <svg width="40" height="40" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0;">
+                                <rect x="2" y="2" width="32" height="32" rx="9" fill="#0284C7" fill-opacity="0.2" stroke="#38BDF8" stroke-width="2"/>
+                                <rect x="8" y="8" width="8" height="8" rx="2" fill="#38BDF8"/>
+                                <rect x="20" y="8" width="8" height="8" rx="2" fill="#14B8A6"/>
+                                <rect x="8" y="20" width="8" height="8" rx="2" fill="#F59E0B"/>
+                                <circle cx="24" cy="24" r="4" fill="#F8FAFC"/>
+                            </svg>
+                            <h3 style="margin-bottom: 0; font-size: 1.8rem;">ClickManager</h3>
+                        </div>
                         <span style="background: rgba(56, 189, 248, 0.15); color: var(--accent); padding: 0.25rem 0.7rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Prototipo in Sviluppo</span>
                     </div>
-                    <p style="margin-bottom: 1rem;">Centro di controllo unificato in fase di progettazione per coordinare sessioni, profili d'uso, turni e report delle utility dell'ecosistema:</p>
+
+                    <p style="margin-bottom: 1rem; text-align: justify;">Centro di controllo unificato in fase di progettazione per coordinare sessioni, profili d'uso, turni e report delle utility dell'ecosistema:</p>
                     <ul>
-                        <li><strong>Gestione profili e turni:</strong> configurazione centralizzata di orari di lavoro, pause e modalità d'uso in un unico punto.</li>
-                        <li><strong>Panoramica sessioni e report:</strong> consultazione ordinata di attività, confronti storici e archivi salvati in locale.</li>
-                        <li><strong>Controllo e privacy locale:</strong> gestione rapida di parametri, avvio in background e cartelle dati senza invio automatico esterno.</li>
+                        <li style="text-align: justify;"><strong>Gestione profili e turni:</strong> configurazione centralizzata di orari di lavoro, pause e modalità d'uso in un unico punto.</li>
+                        <li style="text-align: justify;"><strong>Panoramica sessioni e report:</strong> consultazione ordinata di attività, confronti storici e archivi salvati in locale.</li>
+                        <li style="text-align: justify;"><strong>Controllo e privacy locale:</strong> gestione rapida di parametri, avvio in background e cartelle dati senza invio automatico esterno.</li>
                     </ul>
                 </div>
                 <div style="margin-top: 1.5rem;">
