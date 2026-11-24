@@ -235,7 +235,7 @@
             section {
                 scroll-margin-top: 175px;
             }
-                        /* Testo giustificato e bilanciato su mobile */
+            /* Testo giustificato e bilanciato su mobile */
             .hero p {
                 padding-left: 1rem;
                 padding-right: 1rem;
@@ -284,7 +284,7 @@
 
         .goog-te-banner-frame.skiptranslate, .skiptranslate > iframe { display: none !important; }
         body { top: 0px !important; }
-                #btn-torna-su {
+        #btn-torna-su {
             position: fixed;
             bottom: 24px;
             right: 24px;
@@ -305,7 +305,7 @@
         #btn-torna-su:hover {
             transform: translateY(-3px);
         }
-       .only-mobile { display: none; }
+        .only-mobile { display: none; }
 
         @media (max-width: 768px) {
             #btn-torna-su {
@@ -332,17 +332,9 @@
             transform: translateY(-4px);
             border-color: var(--accent);
             box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.18);
+        }
 
-            footer {
-                padding-left: 1.5%;
-                padding-right: 1.5%;
-            }
-            footer p:first-of-type {
-                white-space: nowrap;
-                font-size: 2.95vw;
-                letter-spacing: -0.2px;
-            }
-             @media (max-width: 768px) {
+        @media (max-width: 768px) {
             footer {
                 padding-left: 1.5%;
                 padding-right: 1.5%;
@@ -512,7 +504,26 @@
                 <div style="margin-top: 1.5rem;">
                     <a href="#contatti" onclick="precompilaContatto('Configuratore Tecnico Automatico 3D/2D')" class="btn btn-outline" style="display: inline-block; width: 100%; text-align: center;">Richiedi informazioni</a>
                 </div>
-            </div>         
+            </div>
+
+            <!-- Scheda 4: ClickManager (Prototipo in Sviluppo) -->
+            <div class="card" style="border-left: 4px solid var(--accent); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+                        <h3 style="margin-bottom: 0;">ClickManager</h3>
+                        <span style="background: rgba(56, 189, 248, 0.15); color: var(--accent); padding: 0.25rem 0.7rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Prototipo in Sviluppo</span>
+                    </div>
+                    <p style="margin-bottom: 1rem;">Centro di controllo unificato in fase di progettazione per coordinare sessioni, profili d'uso, turni e report delle utility dell'ecosistema:</p>
+                    <ul>
+                        <li><strong>Gestione profili e turni:</strong> configurazione centralizzata di orari di lavoro, pause e modalità d'uso in un unico punto.</li>
+                        <li><strong>Panoramica sessioni e report:</strong> consultazione ordinata di attività, confronti storici e archivi salvati in locale.</li>
+                        <li><strong>Controllo e privacy locale:</strong> gestione rapida di parametri, avvio in background e cartelle dati senza invio automatico esterno.</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <a href="#contatti" onclick="precompilaContatto('ClickManager')" class="btn btn-outline" style="display: inline-block; width: 100%; text-align: center;">Richiedi informazioni</a>
+                </div>
+            </div>
         </div>
     </section>
    
@@ -609,7 +620,7 @@
         <div style="background: #1e293b; border: 1px solid #38bdf8; border-radius: 12px; max-width: 650px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 2rem; color: #f8fafc;">
             <h3 style="color: #38bdf8; margin-bottom: 1rem;">Privacy & Cookie Policy</h3>
             <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 0.8rem;">
-                <strong>Titolare del trattamento:</strong> Romeo Caporaso – Email: Tramite modulo di contatto</a>.
+                <strong>Titolare del trattamento:</strong> Romeo Caporaso – Email: Tramite modulo di contatto.
             </p>
             <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 0.8rem;">
                 <strong>Dati raccolti e finalità:</strong> Questo sito utilizza cookie tecnici necessari al funzionamento e, solo previo tuo esplicito consenso, cookie analitici di terza parte (<strong>Google Analytics 4</strong> con anonimizzazione dell'indirizzo IP) per raccogliere statistiche aggregate sulle visite.
@@ -636,7 +647,7 @@
         </div>
     </div>
 
-       <script>
+    <script>
         const GA_ID = 'G-07Y8SVF31V';
         let analyticsCaricato = false;
 
@@ -738,8 +749,7 @@
             document.body.appendChild(gt);
         })();
     </script>
-    <script src="https://google.com"></script>
-        <button id="btn-torna-su" onclick="tornaSu()" title="Torna su" aria-label="Torna su">
+    <button id="btn-torna-su" onclick="tornaSu()" title="Torna su" aria-label="Torna su">
         <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; stroke: currentColor; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round;"><polyline points="18 15 12 9 6 15"/></svg>
     </button>
 
